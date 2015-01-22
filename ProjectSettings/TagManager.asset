@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - brick
+  - Brick
+  - Ball
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -41,4 +42,28 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Background
+    userID: 1
+    uniqueID: 2169012767
+    locked: 0
+  - name: Boundary
+    userID: 3
+    uniqueID: 2562027507
+    locked: 0
+  - name: Powerups
+    userID: 2
+    uniqueID: 1156509225
+    locked: 0
+  - name: Bricks
+    userID: 4
+    uniqueID: 2300398349
+    locked: 0
+  - name: Ball
+    userID: 5
+    uniqueID: 1365332107
+    locked: 0
+  - name: Player
+    userID: 6
+    uniqueID: 2882579085
     locked: 0
