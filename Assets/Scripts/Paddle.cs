@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Paddle : MonoBehaviour {
+public class paddle : MonoBehaviour {
 
 	private Transform paddleTransform;
 	private Vector2 paddlePosition;
@@ -21,7 +21,7 @@ public class Paddle : MonoBehaviour {
 	private float paddleWidth;
 
     private GameObject _attachedBall;
-    private Ball _attachedBallController;
+    private ball_controller _attachedBallController;
     private Transform _attachedBallTransform;
 
 	// Use this for initialization
@@ -98,7 +98,7 @@ public class Paddle : MonoBehaviour {
         }
     }
 
-    public void setAttachedBall(Ball attachedBall) 
+    public void setAttachedBall(ball_controller attachedBall) 
     {
         _attachedBallController = attachedBall;
         _attachedBall = attachedBall.gameObject;

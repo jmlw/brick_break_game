@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour {
     private static GameManager _instance;
 
     public GameObject ballPrefab;
-    public paddle _paddle;
+    public Paddle _paddle;
 
     ArrayList bricks;
+    ArrayList balls;
+    GameObject paddle;
     int ballCount;
     public int lifeCount = 3;
 
@@ -98,11 +100,31 @@ public class GameManager : MonoBehaviour {
         ballAdded();
     }
 
-    public void registerBrick(GameObject brick) {
+//    public void registerBrick(GameObject brick) {
+//
+//    }
+//
+//    public void registerBall(GameObject ball) {
+//
+//    }
 
+    public void registerBall(Ball ball) {
+        balls.Add(ball);
     }
 
-    public void registerBall(GameObject ball) {
+    public void removeBall(Ball ball) {
+        balls.Remove(ball);
+    }
+    
+    public void registerBrick(Brick brick) {
+        bricks.Add(brick);
+    }
 
+    public void removeBrick(Brick brick) {
+        bricks.Remove(brick);
+    }
+    
+    public void registerPaddle(Paddle paddle) {
+        
     }
 }

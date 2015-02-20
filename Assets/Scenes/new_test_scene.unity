@@ -559,6 +559,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 2ce4dee86ada14234a4a5c775d39fff3, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300020, guid: e4bee91986624472bb120d6b12a3d8f7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ce4dee86ada14234a4a5c775d39fff3, type: 2}
   m_RootGameObject: {fileID: 1897066579}
@@ -792,13 +797,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .25
+    width: 1
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 29.7999992
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

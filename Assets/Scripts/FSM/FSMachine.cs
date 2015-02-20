@@ -37,5 +37,5 @@ public class FSMachine <T> {
         if (PreviousState != null)
             ChangeState(PreviousState);
     }
-};
 }
+

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ball : MonoBehaviour {
+public class ball_controller : MonoBehaviour {
 
     public GameManager manager;
 	Rigidbody2D rBody;
