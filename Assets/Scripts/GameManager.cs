@@ -92,12 +92,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void spawnBall() {
-        ball_controller ball = (ball_controller)Instantiate(ballPrefab, ballSpawnPosition, Quaternion.identity);
-        ball.isAttached = true;
-//        ball_controller ballScript = ball.GetComponents<ball_controller>();
-//        ballScript.manager = this;
-        _paddle.setAttachedBall(ball);
-        ballAdded();
+//        ball_controller ball = (ball_controller)Instantiate(ballPrefab, ballSpawnPosition, Quaternion.identity);
+//        ball.isAttached = true;
+////        ball_controller ballScript = ball.GetComponents<ball_controller>();
+////        ballScript.manager = this;
+//        _paddle.setAttachedBall(ball);
+//        ballAdded();
     }
 
 //    public void registerBrick(GameObject brick) {

@@ -49,7 +49,7 @@ public class BorderGenerator : MonoBehaviour {
             SpriteRenderer borderTileSpriteRenderer = new SpriteRenderer();
             borderTileSpriteRenderer.sprite = borderTile;
             SpriteRenderer borderTileGOSpriteRenderer = borderTileGO.AddComponent<SpriteRenderer>();
-            borderTileGO = borderTileGOSpriteRenderer;
+//            borderTileGO = borderTileGOSpriteRenderer;
         }
     }
 
