@@ -21,8 +21,8 @@ public class destroyer : MonoBehaviour {
         if (collider.gameObject.tag == "Ball")
         {
             Debug.Log("Ball to be destroyed");
+            manager.removeBall((Ball)collider.gameObject.GetComponent(typeof(Ball)));
             Destroy(collider.gameObject);
-            manager.ballKilled();
         } else
         {
             //now destroy

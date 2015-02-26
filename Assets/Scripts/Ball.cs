@@ -3,13 +3,18 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-    public GameManager manager;
+    private GameManager manager;
+    private GameObject  managerObj;
 	Rigidbody2D rBody;
 
     public bool isAttached;
 
     void Awake() {
-        
+//        managerObj = GameObject.Find("GameManager");
+//        manager = managerObj.GetComponent(typeof(GameManager));
+        manager = GameManager.Instance;
+
+        manager.registerBall(this);
     }
 
 	// Use this for initialization
@@ -27,10 +32,18 @@ public class Ball : MonoBehaviour {
 	}
 
     void OnDestroy() {
-//        manager.ballKilled();
+        manager.removeBall(this);  
     }
 
-    public void launch() {
-        rigidbody2D.velocity = new Vector2(0, 20);
+    void FixedUpdate() {
+        velocityCheck();
     }
+
+    private void velocityCheck() {
+
+    }
+
+//    public void launch() {
+//        rigidbody2D.velocity = new Vector2(0, 20);
+//    }
 }

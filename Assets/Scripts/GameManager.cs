@@ -1,21 +1,27 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
     private static GameManager _instance;
 
     public GameObject ballPrefab;
-    public Paddle _paddle;
 
-    ArrayList bricks;
-    ArrayList balls;
-    GameObject paddle;
-    int ballCount;
-    public int lifeCount = 3;
+    public GameObject paddlePrefab;
+    private Paddle paddle;
+    private Transform paddleTransform;
 
-    Vector2 ballSpawnPosition;
+    //TODO: Profile / figure out maximum number of bricks
+    //Set list to size at least large enough to contain max bricks
+    private List<Brick> bricks = new List<Brick>();
 
+    //TODO: Should we have a max number of balls? Likely no,
+    //but setting a default size for the list will increase performance
+    //preventing list resizing later (Likely O(n) level complexity)
+    private List<Ball> balls = new List<Ball>();
+    private int ballCount;
+
+    private int lifeCount = 3;
 
     public static GameManager Instance
     {
@@ -51,7 +57,7 @@ public class GameManager : MonoBehaviour {
 
         setFixedFrameRate(60);
 
-        ballSpawnPosition = _paddle.transform.FindChild("ballSpawnPosition").position;
+        spawnPaddle();
     }
 
 	// Use this for initialization
@@ -64,17 +70,17 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
-    void setFixedFrameRate(int targetFrames) {
+    private void setFixedFrameRate(int targetFrames) {
         Debug.Log("Setting a target frame rate of: " + targetFrames);
         Application.targetFrameRate = targetFrames;
     }
 
-    public void ballAdded() {
+    private void ballAdded() {
         Debug.Log("Ball Added");
         ++ballCount;
     }
 
-    public void ballKilled() {
+    private void ballKilled() {
         Debug.Log("Ball Killed");
         --ballCount;
 
@@ -91,25 +97,26 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Game Over!");
     }
 
-    void spawnBall() {
-//        ball_controller ball = (ball_controller)Instantiate(ballPrefab, ballSpawnPosition, Quaternion.identity);
-//        ball.isAttached = true;
-////        ball_controller ballScript = ball.GetComponents<ball_controller>();
-////        ballScript.manager = this;
-//        _paddle.setAttachedBall(ball);
-//        ballAdded();
+    private void spawnPaddle() {
+        if (paddle != null) {
+            //Opps! This shouldn't happen
+            Debug.LogError("Somebody tried to make another player!");
+        } else {
+            Instantiate(paddlePrefab, new Vector3(6,1, 0), Quaternion.identity);
+//            paddle = paddleGO.GetComponent(typeof("Paddle"));
+        }
     }
 
-//    public void registerBrick(GameObject brick) {
-//
-//    }
-//
-//    public void registerBall(GameObject ball) {
-//
-//    }
+    void spawnBall() {
+        Vector3 ballSpawnPosition = paddle.transform.FindChild("ballSpawnPosition").position;
+        GameObject ballGO = (GameObject)Instantiate(ballPrefab, ballSpawnPosition, Quaternion.identity);
+
+//        paddle.setAttachedBall(ball);
+    }
 
     public void registerBall(Ball ball) {
         balls.Add(ball);
+        ball.isAttached = true;
     }
 
     public void removeBall(Ball ball) {
@@ -124,7 +131,11 @@ public class GameManager : MonoBehaviour {
         bricks.Remove(brick);
     }
     
-    public void registerPaddle(Paddle paddle) {
-        
+    public void registerPaddle(Paddle p) {
+        //TODO: keep reference to the paddle
+        //This will come in handy to perform "upgrades" on the paddle
+
+        paddle = p;
+        paddleTransform = paddle.transform;
     }
 }

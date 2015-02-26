@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Paddle : MonoBehaviour {
 
+    private GameManager manager;
+
 	private Transform paddleTransform;
 	private Vector2 paddlePosition;
 
@@ -24,6 +26,12 @@ public class Paddle : MonoBehaviour {
     private Ball _attachedBallController;
     private Transform _attachedBallTransform;
 
+    void Awake() {
+        manager = GameManager.Instance;
+
+        manager.registerPaddle(this);
+    }
+
 	// Use this for initialization
 	void Start () {
         setStartingDefaults();
@@ -40,20 +48,20 @@ public class Paddle : MonoBehaviour {
 
         paddleTransform.position = Vector2.Lerp(paddleTransform.position, paddlePosition, Time.deltaTime);
 
-        if (paddleTransform.position.x <= leftBoundPosition) {
-            paddleTransform.position = new Vector2(leftBoundPosition, paddleTransform.position.y);
-        } else if (paddleTransform.position.x >= rightBoundPosition) {
-            paddleTransform.position = new Vector2(rightBoundPosition, paddleTransform.position.y);
-        }
-
-        if (_attachedBall != null)
-        {
-            _attachedBallTransform.position = new Vector2(paddleTransform.position.x, _attachedBallTransform.position.y);
-
-            if (Input.GetKeyDown("Space")){
-                detachBall();
-            }
-        }
+//        if (paddleTransform.position.x <= leftBoundPosition) {
+//            paddleTransform.position = new Vector2(leftBoundPosition, paddleTransform.position.y);
+//        } else if (paddleTransform.position.x >= rightBoundPosition) {
+//            paddleTransform.position = new Vector2(rightBoundPosition, paddleTransform.position.y);
+//        }
+//
+//        if (_attachedBall != null)
+//        {
+//            _attachedBallTransform.position = new Vector2(paddleTransform.position.x, _attachedBallTransform.position.y);
+//
+//            if (Input.GetKeyDown("Space")){
+//                detachBall();
+//            }
+//        }
 	}
 
     void OnCollisionExit2D(Collision2D collision) {
@@ -80,8 +88,8 @@ public class Paddle : MonoBehaviour {
     void setStartingDefaults() {
         paddleTransform = this.transform;
         
-        paddleTransform.position = startPosition;
-        paddlePosition = startPosition;
+//        paddleTransform.position = startPosition;
+//        paddlePosition = startPosition;
         
         paddleWidth = paddleTransform.collider2D.bounds.size.x;
         
@@ -109,6 +117,6 @@ public class Paddle : MonoBehaviour {
 
     void detachBall() {
         _attachedBall = null;
-        _attachedBallController.launch();
+//        _attachedBallController.launch();
     }
 }
