@@ -1,0 +1,4 @@
+paddle catch power up --> gameManager.PowerUp(powerUp PUtype) --> switch on
+type (ball, paddle, other), forwards call to all current ball (slow, fire,
+cold, slow, etc...), paddle (expand, shrink, magnet, etc...), other (bottom
+shield, slow time, etc...)

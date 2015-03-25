@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
     //but setting a default size for the list will increase performance
     //preventing list resizing later (Likely O(n) level complexity)
     private List<Ball> balls = new List<Ball>();
+    private Stack<Ball> attachedBalls = new Stack<Ball>();
     private int ballCount;
 
     private int lifeCount = 3;
@@ -102,8 +103,8 @@ public class GameManager : MonoBehaviour {
             //Opps! This shouldn't happen
             Debug.LogError("Somebody tried to make another player!");
         } else {
-            Instantiate(paddlePrefab, new Vector3(6,1, 0), Quaternion.identity);
-//            paddle = paddleGO.GetComponent(typeof("Paddle"));
+            GameObject paddleGO = Instantiate(paddlePrefab, new Vector3(8,1, 0), Quaternion.identity);
+            paddleTransform = paddleGO.transform;
         }
     }
 
@@ -114,9 +115,16 @@ public class GameManager : MonoBehaviour {
 //        paddle.setAttachedBall(ball);
     }
 
+    private void launchBall() {
+        Ball b = attachedBalls.Pop();
+        // TODO: perform launch
+        b.launch();
+    }
+
     public void registerBall(Ball ball) {
         balls.Add(ball);
         ball.isAttached = true;
+        attachedBalls.Push(ball);
     }
 
     public void removeBall(Ball ball) {
