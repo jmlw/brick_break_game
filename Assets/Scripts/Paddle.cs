@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Paddle : MonoBehaviour {
 
-    private GameManager manager;
+    private GameplayData gameData;
 
 	private Transform paddleTransform;
 	private Vector2 paddlePosition;
@@ -27,9 +27,9 @@ public class Paddle : MonoBehaviour {
     private Transform _attachedBallTransform;
 
     void Awake() {
-        manager = GameManager.Instance;
+        gameData = GameplayData.Instance;
 
-        manager.registerPaddle(this);
+        gameData.registerPaddle(this);
     }
 
 	// Use this for initialization
@@ -91,7 +91,7 @@ public class Paddle : MonoBehaviour {
 //        paddleTransform.position = startPosition;
 //        paddlePosition = startPosition;
         
-        paddleWidth = paddleTransform.collider2D.bounds.size.x;
+        paddleWidth = paddleTransform.GetComponent<Collider2D>().bounds.size.x;
         
         setBorderValues();
     }

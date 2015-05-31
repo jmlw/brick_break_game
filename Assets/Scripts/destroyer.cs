@@ -3,7 +3,7 @@ using System.Collections;
 
 public class destroyer : MonoBehaviour {
 
-    public GameManager manager;
+    public GameplayData gameData;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class destroyer : MonoBehaviour {
         if (collider.gameObject.tag == "Ball")
         {
             Debug.Log("Ball to be destroyed");
-            manager.removeBall((Ball)collider.gameObject.GetComponent(typeof(Ball)));
+            gameData.removeBall((Ball)collider.gameObject.GetComponent(typeof(Ball)));
             Destroy(collider.gameObject);
         } else
         {

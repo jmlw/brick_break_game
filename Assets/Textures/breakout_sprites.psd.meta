@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: e4bee91986624472bb120d6b12a3d8f7
+timeCreated: 1433089621
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: breakout_sprites
@@ -55,6 +57,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -65,6 +70,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -85,8 +91,8 @@ TextureImporter:
         y: 1920
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_blue
       rect:
@@ -95,8 +101,8 @@ TextureImporter:
         y: 1792
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_black
       rect:
@@ -105,8 +111,8 @@ TextureImporter:
         y: 1920
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_black
       rect:
@@ -115,8 +121,8 @@ TextureImporter:
         y: 1920
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: border_horiz
       rect:
@@ -135,8 +141,8 @@ TextureImporter:
         y: 1792
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_black
       rect:
@@ -145,8 +151,8 @@ TextureImporter:
         y: 1920
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_blue
       rect:
@@ -155,8 +161,8 @@ TextureImporter:
         y: 1792
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_blue
       rect:
@@ -165,8 +171,8 @@ TextureImporter:
         y: 1792
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: border_vert
       rect:
@@ -185,8 +191,8 @@ TextureImporter:
         y: 1664
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_red
       rect:
@@ -195,8 +201,8 @@ TextureImporter:
         y: 1664
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_red
       rect:
@@ -205,8 +211,8 @@ TextureImporter:
         y: 1664
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_red
       rect:
@@ -215,8 +221,8 @@ TextureImporter:
         y: 1664
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick1_green
       rect:
@@ -225,8 +231,8 @@ TextureImporter:
         y: 1536
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_green
       rect:
@@ -235,8 +241,8 @@ TextureImporter:
         y: 1536
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_green
       rect:
@@ -245,8 +251,8 @@ TextureImporter:
         y: 1536
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_green
       rect:
@@ -255,8 +261,8 @@ TextureImporter:
         y: 1536
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick1_yellow
       rect:
@@ -265,8 +271,8 @@ TextureImporter:
         y: 1408
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_yellow
       rect:
@@ -275,8 +281,8 @@ TextureImporter:
         y: 1408
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_yellow
       rect:
@@ -285,8 +291,8 @@ TextureImporter:
         y: 1408
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_yellow
       rect:
@@ -295,8 +301,8 @@ TextureImporter:
         y: 1408
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: border_top_left
       rect:
@@ -315,8 +321,8 @@ TextureImporter:
         y: 1280
         width: 96
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick2_white
       rect:
@@ -325,8 +331,8 @@ TextureImporter:
         y: 1280
         width: 192
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick3_white
       rect:
@@ -335,8 +341,8 @@ TextureImporter:
         y: 1280
         width: 288
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: brick4_white
       rect:
@@ -345,8 +351,8 @@ TextureImporter:
         y: 1280
         width: 384
         height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ball
       rect:
@@ -420,3 +426,5 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

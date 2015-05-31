@@ -3,15 +3,14 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-    private GameManager manager;
-    private GameObject  managerObj;
+    private GameplayData data;
 	Rigidbody2D rBody;
 
     public bool isAttached;
 
     void Awake() {
-        manager = GameManager.Instance;
-        manager.registerBall(this);
+        data = GameplayData.Instance;
+        data.registerBall(this);
     }
 
 	// Use this for initialization
@@ -25,7 +24,7 @@ public class Ball : MonoBehaviour {
 	}
 
     void OnDestroy() {
-        manager.removeBall(this);  
+        data.removeBall(this);  
     }
 
     void FixedUpdate() {
@@ -37,6 +36,6 @@ public class Ball : MonoBehaviour {
     }
 
     public void launch() {
-        rigidbody2D.velocity = new Vector2(0, 20);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
     }
 }
