@@ -4,15 +4,10 @@ using System.Collections;
 public class FSMachine <T> {
 
     private T Owner;
-    private FSMState<T> CurrentState;
-    private FSMState<T> PreviousState;
-    private FSMState<T> GlobalState;
+    private FSMState<T> CurrentState = null;
+    private FSMState<T> PreviousState = null;
+    private FSMState<T> GlobalState = null;
     
-    public void Awake() {
-        CurrentState = null;
-        PreviousState = null;
-        GlobalState = null;
-    }
     
     public void Configure(T owner, FSMState<T> InitialState) {
         Owner = owner;
