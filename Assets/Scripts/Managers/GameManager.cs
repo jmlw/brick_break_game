@@ -6,18 +6,9 @@ public class GameManager : MonoBehaviour {
     private static GameManager _instance;
     private FSMachine<GameManager> FSM;
 
-    public GameObject ballPrefab;
-
-    public GameObject paddlePrefab;
-    private Paddle paddle;
-    private Transform paddleTransform;
-
-    public static GameManager Instance
-    {
-        get
-        {
-            if(_instance == null)
-            {
+    public static GameManager Instance {
+        get {
+            if(_instance == null) {
                 _instance = GameObject.FindObjectOfType<GameManager>();
                 
                 //Tell unity not to destroy this object when loading a new scene!
@@ -29,14 +20,11 @@ public class GameManager : MonoBehaviour {
     }
 
     void Awake() {
-        if(_instance == null)
-        {
+        if(_instance == null) {
             //If I am the first instance, make me the Singleton
             _instance = this;
             DontDestroyOnLoad(this);
-        }
-        else
-        {
+        } else {
             //If a Singleton already exists and you find
             //another reference in scene, destroy it!
             if(this != _instance)
@@ -48,7 +36,6 @@ public class GameManager : MonoBehaviour {
         FSM = new FSMachine<GameManager>();
         FSM.Configure(this, MenuMainState.Instance); // TODO: SET INITIAL STATE
 
-        logTest();
 //        spawnPaddle();
     }
 
@@ -57,38 +44,7 @@ public class GameManager : MonoBehaviour {
         Application.targetFrameRate = targetFrames;
     }
 
-    private void logTest() {
-        Logger.SetLoggingLevel(Logger.LogLevel.DEBUG);
-        Logger.Debug("log test -- debug");
-        Logger.Error("log test -- error");
-        Logger.Info("log test -- info");
-        Logger.Warn("log test -- warn");
-        
-        Logger.SetLoggingLevel(Logger.LogLevel.ERROR);
-        Logger.Debug("log test -- debug");
-        Logger.Error("log test -- error");
-        Logger.Info("log test -- info");
-        Logger.Warn("log test -- warn");
-        
-        Logger.SetLoggingLevel(Logger.LogLevel.INFO);
-        Logger.Debug("log test -- debug");
-        Logger.Error("log test -- error");
-        Logger.Info("log test -- info");
-        Logger.Warn("log test -- warn");
-        
-        Logger.SetLoggingLevel(Logger.LogLevel.WARN);
-        Logger.Debug("log test -- debug");
-        Logger.Error("log test -- error");
-        Logger.Info("log test -- info");
-        Logger.Warn("log test -- warn");
-        
-        Logger.SetLoggingLevel(Logger.LogLevel.NONE);
-        Logger.Debug("log test -- debug");
-        Logger.Error("log test -- error");
-        Logger.Info("log test -- info");
-        Logger.Warn("log test -- warn");
 
-    }
 
 
 

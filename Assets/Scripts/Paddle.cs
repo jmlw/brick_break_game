@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Paddle : MonoBehaviour {
 
@@ -14,46 +14,51 @@ public class Paddle : MonoBehaviour {
 	public float paddleVelosity;
 	public float maximumVelosity;
 
-	public GameObject leftBorder;
-	public GameObject rightBorder;
-
     // left and right bounds represent farthest center of paddle can go
 	private float leftBoundPosition;
 	private float rightBoundPosition;
 	private float paddleWidth;
 
     private GameObject _attachedBall;
-    private Ball _attachedBallController;
-    private Transform _attachedBallTransform;
 
     void Awake() {
         gameData = GameplayData.Instance;
 
-        gameData.registerPaddle(this);
+        gameData.registerPaddle(this.gameObject);
+
+        Transform leftBorder;
+        Transform rightBorder;
+        Dictionary<GameplayData.boundary, Transform> bounds = gameData.getBounds();
+
+        bool errLeft, errRight;
+        leftBorder = bounds[GameplayData.boundary.LEFT];
+        rightBorder = bounds[GameplayData.boundary.RIGHT];
+
+        leftBoundPosition = leftBorder.transform.position.x + leftBorder.transform.localScale.x/2 + paddleWidth/2;
+        rightBoundPosition = rightBorder.transform.position.x - rightBorder.transform.localScale.x/2 - paddleWidth/2;
     }
 
-	// Use this for initialization
+
 	void Start () {
         setStartingDefaults();
 	}
 
 
 	
-	// Update is called once per frame
 	void Update () {
 		// horizontal movement
-        paddlePosition = paddleTransform.position;
-
-        paddlePosition.x += normalizeAxis(Input.GetAxis("Horizontal")) * paddleVelosity;
-
-        paddleTransform.position = Vector2.Lerp(paddleTransform.position, paddlePosition, Time.deltaTime);
-
+//        paddlePosition = paddleTransform.position;
+//
+//        paddlePosition.x += normalizeAxis(Input.GetAxis("Horizontal")) * paddleVelosity;
+//
+//        paddleTransform.position = Vector2.Lerp(paddleTransform.position, paddlePosition, Time.deltaTime);
+//
 //        if (paddleTransform.position.x <= leftBoundPosition) {
 //            paddleTransform.position = new Vector2(leftBoundPosition, paddleTransform.position.y);
 //        } else if (paddleTransform.position.x >= rightBoundPosition) {
 //            paddleTransform.position = new Vector2(rightBoundPosition, paddleTransform.position.y);
 //        }
-//
+
 //        if (_attachedBall != null)
 //        {
 //            _attachedBallTransform.position = new Vector2(paddleTransform.position.x, _attachedBallTransform.position.y);
@@ -93,30 +98,30 @@ public class Paddle : MonoBehaviour {
         
         paddleWidth = paddleTransform.GetComponent<Collider2D>().bounds.size.x;
         
-        setBorderValues();
+//        setBorderValues();
     }
     
-    void setBorderValues(){
-        if (leftBorder != null && rightBorder != null) {
-            leftBoundPosition = leftBorder.transform.position.x + leftBorder.transform.localScale.x/2 + paddleWidth/2;
-            rightBoundPosition = rightBorder.transform.position.x - rightBorder.transform.localScale.x/2 - paddleWidth/2;
-            Debug.Log ("Left bound position: " +leftBoundPosition + " Right bound positon: " + rightBoundPosition);
-        } else {
-            Debug.Log("Missing Border");
-        }
-    }
+//    void setBorderValues(){
+//        if (leftBorder != null && rightBorder != null) {
+//            leftBoundPosition = leftBorder.transform.position.x + leftBorder.transform.localScale.x/2 + paddleWidth/2;
+//            rightBoundPosition = rightBorder.transform.position.x - rightBorder.transform.localScale.x/2 - paddleWidth/2;
+//            Debug.Log ("Left bound position: " +leftBoundPosition + " Right bound positon: " + rightBoundPosition);
+//        } else {
+//            Debug.Log("Missing Border");
+//        }
+//    }
 
-    public void setAttachedBall(Ball attachedBall) 
-    {
-        _attachedBallController = attachedBall;
-        _attachedBall = attachedBall.gameObject;
-//        _attachedBallController = ;
-//        _attachedBallController.isAttached = true;
-        _attachedBallTransform = _attachedBall.transform;
-    }
-
-    void detachBall() {
-        _attachedBall = null;
-//        _attachedBallController.launch();
-    }
+//    public void setAttachedBall(Ball attachedBall) 
+//    {
+//        _attachedBallController = attachedBall;
+//        _attachedBall = attachedBall.gameObject;
+////        _attachedBallController = ;
+////        _attachedBallController.isAttached = true;
+//        _attachedBallTransform = _attachedBall.transform;
+//    }
+//
+//    void detachBall() {
+//        _attachedBall = null;
+////        _attachedBallController.launch();
+//    }
 }

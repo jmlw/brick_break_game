@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 468588}
   m_Layer: 0
   m_Name: ballSpawnPosition
-  m_TagString: Untagged
+  m_TagString: BallSpawnPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,8 +187,6 @@ MonoBehaviour:
   startPosition: {x: 0, y: -14}
   paddleVelosity: 20
   maximumVelosity: 15
-  leftBorder: {fileID: 0}
-  rightBorder: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

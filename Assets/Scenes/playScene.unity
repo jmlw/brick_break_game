@@ -337,7 +337,7 @@ GameObject:
   - 61: {fileID: 651295402}
   m_Layer: 0
   m_Name: border_horiz
-  m_TagString: Untagged
+  m_TagString: BorderTop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,14 +507,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: e422b7dc43134479a80e73f821c22a87, type: 2}
-      propertyPath: leftBorder
-      value: 
-      objectReference: {fileID: 1897066579}
-    - target: {fileID: 11400000, guid: e422b7dc43134479a80e73f821c22a87, type: 2}
-      propertyPath: rightBorder
-      value: 
-      objectReference: {fileID: 1791251123}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e422b7dc43134479a80e73f821c22a87, type: 2}
   m_IsPrefabParent: 0
@@ -1070,7 +1062,7 @@ GameObject:
   - 61: {fileID: 1372390649}
   m_Layer: 0
   m_Name: destroyer
-  m_TagString: Untagged
+  m_TagString: BorderDestroyer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,7 +1329,7 @@ GameObject:
   - 61: {fileID: 1791251125}
   m_Layer: 0
   m_Name: border_vert_right
-  m_TagString: Untagged
+  m_TagString: BorderRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1436,7 +1428,7 @@ GameObject:
   - 61: {fileID: 1897066581}
   m_Layer: 0
   m_Name: border_vert_left
-  m_TagString: Untagged
+  m_TagString: BorderLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
