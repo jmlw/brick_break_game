@@ -5,6 +5,7 @@ public class Paddle : MonoBehaviour {
 
     private GameplayData gameData;
 
+    private GameObject paddleGameObject;
 	private Transform paddleTransform;
 	private Vector2 paddlePosition;
 
@@ -92,11 +93,20 @@ public class Paddle : MonoBehaviour {
 
     void setStartingDefaults() {
         paddleTransform = this.transform;
+        paddleGameObject = this.gameObject;
         
 //        paddleTransform.position = startPosition;
 //        paddlePosition = startPosition;
         
-        paddleWidth = paddleTransform.GetComponent<Collider2D>().bounds.size.x;
+//        paddleWidth = paddleTransform.GetComponent<Collider2D>().bounds.size.x;
+        foreach (GameObject o in GameObject.FindGameObjectsWithTag("Player")) {
+            Logger.Debug("Method: setStartingDefaults - searching for active paddle");
+            if (o.activeInHierarchy) {
+                paddleWidth = o.transform.GetComponent<Collider2D>().bounds.size.x;
+                Logger.Debug("Active paddle found: paddle width for active paddle: " + paddleWidth);
+                break;
+            }
+        }
         
 //        setBorderValues();
     }
