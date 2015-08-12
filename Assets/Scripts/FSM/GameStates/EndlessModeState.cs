@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public sealed class MenuMainState : FSMState <GameManager> {
+public sealed class EndlessModeState : FSMState <GameManager> {
 
-    private static MenuMainState _instance = new MenuMainState();
-    public static MenuMainState Instance {
+    private static EndlessModeState _instance = new EndlessModeState();
+    public static EndlessModeState Instance {
         get {
             return _instance;
         }
@@ -12,18 +12,13 @@ public sealed class MenuMainState : FSMState <GameManager> {
 
     public override void StateEnter (GameManager o) {
         Logger.Debug("State Enter: " + this.GetType().Name);
-        // Load Main Menu scene?
     }
     
     public override void StateUpdate (GameManager o) {
         Logger.Debug("State Update: " + this.GetType().Name);
-        // Listen for button clicks on Main Menu??
-        // This may not be necessary with Unity's GUI
-        // messaging system to wire actions with the editor
     }
     
     public override void StateExit (GameManager o) {
         Logger.Debug("State Exit: " + this.GetType().Name);
-
     }
 }

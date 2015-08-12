@@ -4,13 +4,12 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour {
 
     private static GameManager _instance;
-    private FSMachine<GameManager> FSM;
+    private FSMachine<GameManager> gameStateMachine;
 
     public static GameManager Instance {
         get {
             if(_instance == null) {
                 _instance = GameObject.FindObjectOfType<GameManager>();
-                
                 //Tell unity not to destroy this object when loading a new scene!
                 DontDestroyOnLoad(_instance.gameObject);
             }
@@ -33,19 +32,36 @@ public class GameManager : MonoBehaviour {
 
         setFixedFrameRate(60);
 
-        FSM = new FSMachine<GameManager>();
-        FSM.Configure(this, MenuMainState.Instance); // TODO: SET INITIAL STATE
+        gameStateMachine = new FSMachine<GameManager>();
+        gameStateMachine.Configure(this, MenuMainState.Instance); // TODO: SET INITIAL STATE
 
 //        spawnPaddle();
     }
 
+    void Update() {
+        gameStateMachine.StateUpdate();
+    }
+
     private void setFixedFrameRate(int targetFrames) {
-        Debug.Log("Setting a target frame rate of: " + targetFrames);
+        Logger.Debug("Setting a target frame rate of: " + targetFrames);
         Application.targetFrameRate = targetFrames;
     }
 
+    public void actionArcadeMode() {
+        gameStateMachine.ChangeState(ArcadeModeState.Instance);
+    }
 
+    public void actionEndlessMode() {
+        gameStateMachine.ChangeState(EndlessModeState.Instance);
+    }
 
+    public void actionScoreboard() {
+        gameStateMachine.ChangeState(ScoreboardState.Instance);
+    }
+
+    public void actionSettings() {
+        gameStateMachine.ChangeState(SettingsState.Instance);
+    }
 
 
 // Use this for initialization

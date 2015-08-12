@@ -431,12 +431,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5999999, z: 0}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434774}
-  - {fileID: 460060}
   - {fileID: 453664}
+  - {fileID: 460060}
   - {fileID: 484138}
   - {fileID: 468700}
   - {fileID: 446864}
@@ -519,7 +519,7 @@ Transform:
   - {fileID: 495536}
   - {fileID: 405470}
   m_Father: {fileID: 436798}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &456978
 Transform:
   m_ObjectHideFlags: 1
@@ -546,7 +546,7 @@ Transform:
   - {fileID: 463718}
   - {fileID: 450398}
   m_Father: {fileID: 436798}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &463510
 Transform:
   m_ObjectHideFlags: 1
@@ -729,7 +729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df48da7c7931d4d4780c60dd321d2898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: -14}
+  playerTags: 5
+  startPosition: {x: 0, y: -7}
   paddleVelosity: 20
   maximumVelosity: 15
 --- !u!212 &21202470

@@ -14,7 +14,7 @@ public class FSMachine <T> {
         ChangeState(InitialState);
     }
     
-    public void  Update() {
+    public void  StateUpdate() {
         if (GlobalState != null)  GlobalState.StateUpdate(Owner);
         if (CurrentState != null) CurrentState.StateUpdate(Owner);
     }

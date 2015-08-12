@@ -36,6 +36,14 @@ public class GameplayData {
         }
     }
 
+    public List<Ball> getBalls() {
+        return balls;
+    }
+
+    public Stack<Ball> getAttachedBalls() {
+        return attachedBalls;
+    }
+
     public int getLives() {
         return lifeCount;
     }
