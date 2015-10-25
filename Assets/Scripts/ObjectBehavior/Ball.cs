@@ -9,8 +9,17 @@ public class Ball : MonoBehaviour {
     private Transform ballTransform;
     public float ballSpeed = 5;
 	Rigidbody2D rBody;
+    private Vector2 originalPos;
 
     public bool isAttached;
+
+    public bool triggerLaunch = false;
+    public bool triggerReset = false;
+
+    [Range(0f,360f)]
+    public float maxTheta = 0;
+    [Range(0f,360f)]
+    public float minTheta = 0;
 
 //    private int raysInCircle = 16; //number of pie slices to divide ball into when raycasting
 
@@ -18,24 +27,38 @@ public class Ball : MonoBehaviour {
         data = GameplayData.Instance;
         data.registerBall(this);
         ballTransform = this.transform;
+        originalPos = ballTransform.position;
     }
 
     void OnCollisionEnter2D (Collision2D collider) {
-        //TODO: check position ball hit paddle
-        // calculate how much X velocity to add
-        // normailze ball speed from collision 
+        // TODO: calculate trajectory reflection and update velocity/acceleration accordingly
     }
 
 
     void OnDestroy() {
-        data.removeBall(this);  
+//        data.removeBall(this);  
+    }
+
+    void Update() {
+        if (triggerLaunch)
+        {
+            launch();
+            triggerLaunch = false;
+        }
+
+        if (triggerReset)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            ballTransform.position = originalPos;
+            triggerReset = false;
+        }
     }
 
     public void launch() {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+        float randTheta = Random.Range(minTheta, maxTheta);
+        Logger.Debug("theta: " + randTheta);
+        float xComponent = Mathf.Cos(Mathf.Deg2Rad * randTheta);
+        float yComponent = Mathf.Sin(Mathf.Deg2Rad * randTheta);
+        GetComponent<Rigidbody2D>().velocity = (new Vector2(xComponent, yComponent)).normalized * ballSpeed;
     }
-
-//    public void checkCollisions() {
-//        Vector2 raycastOrigin = ballTransform.position;
-//    }
 }

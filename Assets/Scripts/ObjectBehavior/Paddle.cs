@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Paddle : MonoBehaviour
+public class Paddle : MonoBehaviour, IPaddle
 {
 
     public int playerTags = 5;
@@ -97,6 +97,8 @@ public class Paddle : MonoBehaviour
     private float paddleWidth;
     private GameObject _attachedBall;
 
+    private Vector2 lastPosition;
+
     void Awake()
     {
 
@@ -109,7 +111,7 @@ public class Paddle : MonoBehaviour
 
         PaddleSizes thisPaddleSize = new PaddleSizes(children);
 
-
+        lastPosition = paddleTransform.position;
     }
 
     void Start()
@@ -128,6 +130,7 @@ public class Paddle : MonoBehaviour
     
     void Update()
     {
+        lastPosition = paddleTransform.position;
 //         horizontal movement
 //        paddlePosition = paddleTransform.position;
 //
@@ -220,6 +223,14 @@ public class Paddle : MonoBehaviour
         // TODO: Finish
 
         return false;
+    }
+
+    void IPaddle.Launch() {
+
+    }
+
+    void IPaddle.MoveTo(Vector2 destination) {
+        paddleTransform.position = Vector2.Lerp(lastPosition, destination, Time.deltaTime);
     }
 
 }
