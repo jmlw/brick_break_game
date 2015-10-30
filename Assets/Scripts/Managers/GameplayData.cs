@@ -63,11 +63,14 @@ public class GameplayData {
     }
 
     public void registerBall(Ball ball) {
-
         balls.Add(ball);
-        ball.isAttached = true;
-        attachedBalls.Push(ball);
         Logger.Debug("Ball Registered");
+        AttachBall(ball);
+    }
+
+    public void AttachBall(Ball ball) {
+        attachedBalls.Push(ball);
+        Logger.Debug("Ball attached");
     }
     
     public void removeBall(Ball ball) {

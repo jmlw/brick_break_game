@@ -21,12 +21,8 @@ public class destroyer : MonoBehaviour {
         if (collider.gameObject.tag == "Ball")
         {
             Debug.Log("Ball to be destroyed");
-            gameData.removeBall((Ball)collider.gameObject.GetComponent(typeof(Ball)));
+//            gameData.removeBall((Ball)collider.gameObject.GetComponent(typeof(Ball)));
             Destroy(collider.gameObject);
-        } else
-        {
-            //now destroy
-            Destroy(collider.gameObject);  //TODO: return object to pool?
         }
     }
 }

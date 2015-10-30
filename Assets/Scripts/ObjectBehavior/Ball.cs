@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour {
 	Rigidbody2D rBody;
     private Vector2 originalPos;
 
-    public bool isAttached;
+//    public bool isAttached;
 
     public bool triggerLaunch = false;
     public bool triggerReset = false;
@@ -30,19 +30,15 @@ public class Ball : MonoBehaviour {
         originalPos = ballTransform.position;
     }
 
-    void OnCollisionEnter2D (Collision2D collider) {
-        // TODO: calculate trajectory reflection and update velocity/acceleration accordingly
-    }
-
 
     void OnDestroy() {
-//        data.removeBall(this);  
+        data.removeBall(this);
     }
 
     void Update() {
         if (triggerLaunch)
         {
-            launch();
+            Launch();
             triggerLaunch = false;
         }
 
@@ -54,7 +50,7 @@ public class Ball : MonoBehaviour {
         }
     }
 
-    public void launch() {
+    public void Launch() {
         float randTheta = Random.Range(minTheta, maxTheta);
         Logger.Debug("theta: " + randTheta);
         float xComponent = Mathf.Cos(Mathf.Deg2Rad * randTheta);

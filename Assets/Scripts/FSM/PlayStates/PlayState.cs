@@ -32,7 +32,7 @@ public class PlayState : FSMState <PlayController> {
         if (launchBall == true) {
             Stack<Ball> attachedBalls = gd.getAttachedBalls();
             foreach (Ball b in attachedBalls) {
-                b.launch();
+                b.Launch();
             }
         }
     }

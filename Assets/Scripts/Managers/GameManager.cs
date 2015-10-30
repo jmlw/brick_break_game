@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour {
         get {
             if(_instance == null) {
                 _instance = GameObject.FindObjectOfType<GameManager>();
-                //Tell unity not to destroy this object when loading a new scene!
                 DontDestroyOnLoad(_instance.gameObject);
             }
             
@@ -20,12 +19,9 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         if(_instance == null) {
-            //If I am the first instance, make me the Singleton
             _instance = this;
             DontDestroyOnLoad(this);
         } else {
-            //If a Singleton already exists and you find
-            //another reference in scene, destroy it!
             if(this != _instance)
                 Destroy(this.gameObject);
         }
@@ -33,9 +29,7 @@ public class GameManager : MonoBehaviour {
         setFixedFrameRate(60);
 
         gameStateMachine = new FSMachine<GameManager>();
-        gameStateMachine.Configure(this, MenuMainState.Instance); // TODO: SET INITIAL STATE
-
-//        spawnPaddle();
+        gameStateMachine.Configure(this, MenuMainState.Instance);
     }
 
     void Update() {
@@ -48,18 +42,22 @@ public class GameManager : MonoBehaviour {
     }
 
     public void actionArcadeMode() {
+        Logger.Debug("State changing to ArcadeMode");
         gameStateMachine.ChangeState(ArcadeModeState.Instance);
     }
 
     public void actionEndlessMode() {
+        Logger.Debug("State changing to EndlessMode");
         gameStateMachine.ChangeState(EndlessModeState.Instance);
     }
 
     public void actionScoreboard() {
+        Logger.Debug("State changing to Scoreboard");
         gameStateMachine.ChangeState(ScoreboardState.Instance);
     }
 
     public void actionSettings() {
+        Logger.Debug("State changing to Settings");
         gameStateMachine.ChangeState(SettingsState.Instance);
     }
 }
