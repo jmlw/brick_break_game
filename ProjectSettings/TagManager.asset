@@ -12,6 +12,7 @@ TagManager:
   - BorderRight
   - BorderDestroyer
   - BallSpawnPosition
+  - TouchArea
   layers:
   - Default
   - TransparentFX

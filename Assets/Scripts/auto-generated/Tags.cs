@@ -18,5 +18,6 @@ namespace k
 		public const string BORDER_RIGHT = "BorderRight";
 		public const string BORDER_DESTROYER = "BorderDestroyer";
 		public const string BALL_SPAWN_POSITION = "BallSpawnPosition";
+		public const string TOUCH_AREA = "TouchArea";
 	}
 }
