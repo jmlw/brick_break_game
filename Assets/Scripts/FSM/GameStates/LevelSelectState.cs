@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelSelectState : FSMState <PlayController> {
+public class LevelSelectState : FSMState <GameManager> {
 
     GameplayData gd = GameplayData.Instance;
 
@@ -12,22 +12,23 @@ public class LevelSelectState : FSMState <PlayController> {
         }
     }
 
-    public override void StateEnter (PlayController entity) {
-        // create initial Ball, attach to paddle?
+	public override void StateEnter (GameManager entity) {
+        
         Logger.Debug("State Enter: " + this.GetType().Name);
-        //TODO: init play state machine with Level Select initial state
-        // level select initial state will initialize a level chooser
-        // on statenetner, state exit will clear the level chooser from screen
+        
+		// read XML? of levels in (name, lvl #, (unlockable, locked for future release?), etc...), 
+		// load last completed level and set all below unlocked, generate grid for all levels
+		// 
 
     }
     
-    public override void StateUpdate (PlayController entity) {
+	public override void StateUpdate (GameManager entity) {
         Logger.Debug("State Update: " + this.GetType().Name);
         // wait for level select
 
     }
     
-    public override void StateExit (PlayController entity) {
+	public override void StateExit (GameManager entity) {
         Logger.Debug("State Exit: " + this.GetType().Name);
         // TODO: remove level chooser from screen if not done already
     }

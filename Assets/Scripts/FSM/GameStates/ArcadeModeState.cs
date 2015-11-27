@@ -14,7 +14,10 @@ public sealed class ArcadeModeState : FSMState <GameManager> {
 
     public override void StateEnter (GameManager o) {
         Logger.Debug("State Enter: " + this.GetType().Name);
-        Application.LoadLevel(k.Scenes.PLAY_SCENE);
+//        Application.LoadLevel(k.Scenes.PLAY_SCENE);
+
+		// Do not load play scene, display level picker menu / canvas -> switch to LevelSelectState : FSMState <GameManager>
+
         //TODO: init play state machine with Level Select initial state
         // level select initial state will initialize a level chooser
         // on statenetner, state exit will clear the level chooser from screne

@@ -2,3 +2,17 @@ paddle catch power up --> gameManager.PowerUp(powerUp PUtype) --> switch on
 type (ball, paddle, other), forwards call to all current ball (slow, fire,
 cold, slow, etc...), paddle (expand, shrink, magnet, etc...), other (bottom
 shield, slow time, etc...)
+
+
+input controller
+	- singleton
+	- set struct of inputs on frame start (anything looking for input will reference this struct)
+	- inputs struct holds previous frames input as well?
+
+	- drag input only
+	tap to launch ball
+
+
+
+pause menu, completed menu, game over menu
+	- exist under play scene -- will only ever be displayed after playing!

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayController : MonoBehaviour {
 
-    private FSMachine<PlayController> playStateMachine;
+//    private FSMachine<PlayController> playStateMachine;
     private GameplayData data = GameplayData.Instance;
 
     private static PlayController _instance;
@@ -20,16 +20,16 @@ public class PlayController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Logger.Debug("PlayController.Start initialize");
-        playStateMachine = new FSMachine<PlayController>();
-        PlayController playStateMachineOwner = this;
+//        playStateMachine = new FSMachine<PlayController>();
+//        PlayController playStateMachineOwner = this;
 
-        playStateMachine.Configure(playStateMachineOwner, LevelSelectState.Instance);
+//        playStateMachine.Configure(playStateMachineOwner, LevelSelectState.Instance);
         Logger.Debug("PlayController.Start return");
 	}
 	
 	
-	void PlayStateMachineUpdate () {
-        playStateMachine.StateUpdate();
-	}
+//	void PlayStateMachineUpdate () {
+//        playStateMachine.StateUpdate();
+//	}
         
 }

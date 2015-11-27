@@ -12,27 +12,28 @@ public class TouchArea : MonoBehaviour {
         spriteRen = GetComponent<SpriteRenderer>();
     }
 
-    void OnTouchDown() {
-
+    public void OnTouchDown() {
+        Debug.Log("OnTouchDown");
         spriteRen.color = selectedColour;
     }
 
-    void OnTouchUp() {
-
+    public void OnTouchUp() {
+        Debug.Log("OnTouchUp");
         spriteRen.color = defaultColour;
     }
 
-    void OnTouchStay() {
-
+    public void OnTouchStay() {
+        Debug.Log("OnTouchStay");
         spriteRen.color = selectedColour;
     }
 
-    void OnTouchExit() {
-
+    public void OnTouchExit() {
+        Debug.Log("OnTouchExit");
         spriteRen.color = defaultColour;
     }
 
     public void ButtonPress() {
+        Debug.Log("OnTouchButtonPress");
         spriteRen.color = thirdColor;
     }
 }
