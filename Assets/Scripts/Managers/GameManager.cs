@@ -38,12 +38,13 @@ public class GameManager : MonoBehaviour {
 
     private void setFixedFrameRate(int targetFrames) {
         Logger.Debug("Setting a target frame rate of: " + targetFrames);
+        QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrames;
     }
 
     public void actionArcadeMode() {
         Logger.Debug("State changing to ArcadeMode");
-        gameStateMachine.ChangeState(ArcadeModeState.Instance);
+        gameStateMachine.ChangeState(ArcadeMode.Instance);
     }
 
     public void actionEndlessMode() {

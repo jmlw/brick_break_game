@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public sealed class ScoreboardState : FSMState <GameManager> {
 
@@ -15,7 +16,7 @@ public sealed class ScoreboardState : FSMState <GameManager> {
     }
     
     public override void StateUpdate (GameManager o) {
-        Logger.Debug("State Update: " + this.GetType().Name);
+        // Logger.Debug("State Update: " + this.GetType().Name);
     }
     
     public override void StateExit (GameManager o) {

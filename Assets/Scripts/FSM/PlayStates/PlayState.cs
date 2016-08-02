@@ -25,7 +25,7 @@ public class PlayState : FSMState <PlayController> {
     }
     
     public override void StateUpdate (PlayController entity) {
-        Logger.Debug("State Update: " + this.GetType().Name);
+        // Logger.Debug("State Update: " + this.GetType().Name);
         // TODO: get input from input controller
         // if input, then do Paddle Move
         // other checks / operations to do?

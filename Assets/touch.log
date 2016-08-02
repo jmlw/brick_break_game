@@ -1,0 +1,181 @@
+<color=black>### DEBUG ###:  Touch phase moved
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:77)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  State Update: ArcadeModeState
+METHOD: Void StateUpdate(GameManager)</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+ArcadeModeState:StateUpdate(GameManager) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/GameStates/ArcadeModeState.cs:37)
+FSMachine`1:StateUpdate() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/FSMachine.cs:19)
+GameManager:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/GameManager.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Found more than 0 touches, will process each touch
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch world position: (12.9, -12.4, -10.0)
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:43)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch ID: 0
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:45)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch phase not handled.
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:100)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  State Update: ArcadeModeState
+METHOD: Void StateUpdate(GameManager)</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+ArcadeModeState:StateUpdate(GameManager) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/GameStates/ArcadeModeState.cs:37)
+FSMachine`1:StateUpdate() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/FSMachine.cs:19)
+GameManager:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/GameManager.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Found more than 0 touches, will process each touch
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch world position: (12.9, -12.4, -10.0)
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:43)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch ID: 0
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:45)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch phase not handled.
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:100)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  State Update: ArcadeModeState
+METHOD: Void StateUpdate(GameManager)</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+ArcadeModeState:StateUpdate(GameManager) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/GameStates/ArcadeModeState.cs:37)
+FSMachine`1:StateUpdate() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/FSM/FSMachine.cs:19)
+GameManager:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/GameManager.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Found more than 0 touches, will process each touch
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:36)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch world position: (14.4, -12.5, -10.0)
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:43)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch ID: 0
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:45)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)
+
+<color=black>### DEBUG ###:  Touch phase moved
+METHOD: Void Update()</color>
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+Logger:consoleLog(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:70)
+Logger:Debug(String) (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs:30)
+TouchInput:Update() (at /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Managers/TouchInput.cs:77)
+
+(Filename: /Users/joshwood/Documents/DEVELOPMENT/UNITY/breakout_clone/Assets/Scripts/Utility/Logger.cs Line: 70)

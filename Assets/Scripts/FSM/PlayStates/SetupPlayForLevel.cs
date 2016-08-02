@@ -27,7 +27,7 @@ public class SetupPlayForLevel : FSMState <PlayController> {
     }
     
     public override void StateUpdate (PlayController entity) {
-        Logger.Debug("State Update: " + this.GetType().Name);
+        // Logger.Debug("State Update: " + this.GetType().Name);
 		// TODO: Switch to playstate on first tap!!!
 
 		if (launchBall == true) {

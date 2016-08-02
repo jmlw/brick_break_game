@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LevelSelectState : FSMState <GameManager> {
 
@@ -23,7 +24,7 @@ public class LevelSelectState : FSMState <GameManager> {
     }
     
 	public override void StateUpdate (GameManager entity) {
-        Logger.Debug("State Update: " + this.GetType().Name);
+        // Logger.Debug("State Update: " + this.GetType().Name);
         // wait for level select
 
     }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public sealed class MenuMainState : FSMState <GameManager> {
 
@@ -16,7 +17,7 @@ public sealed class MenuMainState : FSMState <GameManager> {
     }
     
     public override void StateUpdate (GameManager o) {
-        Logger.Debug("State Update: " + this.GetType().Name);
+        // Logger.Debug("State Update: " + this.GetType().Name);
         // Listen for button clicks on Main Menu??
         // This may not be necessary with Unity's GUI
         // messaging system to wire actions with the editor

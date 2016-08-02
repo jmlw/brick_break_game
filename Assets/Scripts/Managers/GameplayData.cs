@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class GameplayData {
 
+#region GameplayObjects
+    
     private GameObject paddlePrefab;
     private GameObject paddle;
     private Transform paddleTransform;
@@ -15,19 +17,21 @@ public class GameplayData {
         BOTTOM
     };
     private Dictionary<boundary, Transform> bounds = new Dictionary<boundary, Transform>();
-
-    //TODO: Profile / figure out maximum number of bricks
-    //Set list to size at least large enough to contain max bricks
     private List<Brick> bricks = new List<Brick>();
-    
-    //TODO: Should we have a max number of balls? Likely no,
-    //but setting a default size for the list will increase performance
-    //preventing list resizing later (Likely O(n) level complexity)
     private List<Ball> balls = new List<Ball>();
     private Stack<Ball> attachedBalls = new Stack<Ball>();
-    private int ballCount;
     
+#endregion
+    
+#region LiveData
+
+    private int ballCount;
     private int lifeCount = 3;
+    
+    private string playMode;
+    private int arcadeLevel;
+    
+#endregion
 
     private static GameplayData _instance = new GameplayData();
     public static GameplayData Instance {
